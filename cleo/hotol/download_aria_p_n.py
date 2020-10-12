@@ -11,11 +11,11 @@ LOGGER = logging.getLogger(__name__)
 import aria2p
 import asyncio
 import os
-from bot.locals.upload_to_tg import upload_to_tg, upload_to_gdrive
-from bot.locals.create_compressed_archive import create_archive, unzip_me, unrar_me, untar_me
-from bot.locals.extract_link_from_message import extract_link
+from cleo.hotol.upload_to_tg import upload_to_tg, upload_to_gdrive
+from cleo.hotol.create_compressed_archive import create_archive, unzip_me, unrar_me, untar_me
+from cleo.hotol.extract_link_from_message import extract_link
 
-from bot import (
+from cleo import (
     ARIA_TWO_STARTED_PORT,
     MAX_TIME_TO_WAIT_FOR_TORRENTS_TO_START,
     AUTH_CHANNEL,
