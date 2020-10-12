@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # Install rclone static binary
-curl -O https://downloads.rclone.org/rclone-current-linux-amd64.zip
-unzip rclone-current-linux-amd64.zip
+# curl -O https://downloads.rclone.org/rclone-current-linux-amd64.zip
+# unzip rclone-current-linux-amd64.zip
 
 # Install aria2c static binary
 wget -q https://github.com/P3TERX/aria2-builder/releases/download/1.35.0_2020.09.04/aria2-1.35.0-static-linux-amd64.tar.gz
