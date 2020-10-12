@@ -1,4 +1,4 @@
-from bot.sample_config import Config
+from cleo.sample_config import Config
 
 class Config(Config):
 	TG_BOT_TOKEN= "1146934858:AAFfBhyMyMJSdjBVxa8LsQHO3JmF_p6Zdsw"
