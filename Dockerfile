@@ -2,8 +2,8 @@ FROM python:3.8-slim AS compile-image
 WORKDIR /app
 
 
-RUN apt-get update \
-    && apt-get install -y --no-install-recommends build-essential gcc git \
+RUN apt-get -o Acquire::Check-Valid-Until=false -o Acquire::Check-Date=false update \
+    && apt-get install --no-install-recommends --no-install-suggests --no-upgrade build-essential -y gcc git \
     && apt-get clean autoclean && rm -rf /var/lib/apt/lists/*
 
 RUN pip3 install --ignore-installed distlib pipenv
@@ -21,8 +21,8 @@ WORKDIR /app
 ENV PATH="/app/venv/bin:$PATH" VIRTUAL_ENV="/app/venv" LANG=C.UTF-8 DEBIAN_FRONTEND=noninteractive
 
 COPY set.sh .
-RUN apt-get update \
-    && apt-get install -y --no-install-recommends gnupg2 \
+RUN apt-get -o Acquire::Check-Valid-Until=false -o Acquire::Check-Date=false update \
+    && apt-get install --no-install-recommends --no-install-suggests --no-upgrade build-essential -y gnupg2 \
     wget \
     curl \
     busybox \
