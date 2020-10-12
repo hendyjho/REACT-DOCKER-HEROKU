@@ -7,5 +7,11 @@
   "repository": "https://github.com/hendyjho/REACT-DOCKER-HEROKU",
   "success_url": "https://github.com/hendyjho/REACT-DOCKER-HEROKU",
   "website": "https://github.com/hendyjho/REACT-DOCKER-HEROKU",
-  "stack": "container"  
+  "stack": "container",
+ "formation": {
+    "worker": {
+      "quantity": 1,
+      "size": "free"
+    }
+  }
 }
